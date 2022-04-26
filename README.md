@@ -1,4 +1,4 @@
-# Factory Management: API
+# Teamway Personality Test: API
 
 This is a Symfony API Platform project (Personality Test).
 
