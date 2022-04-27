@@ -1,0 +1,10 @@
+App\Entity\Answer:
+    answer_{1..25}:
+        choice: <sentence(30)>
+        score: <numberBetween(1,5)>
+        created: <dateTime()>
+        createdBy: <text()>
+        updated: <dateTime()>
+        updatedBy: <text()>
+        isPublished: <boolean(35)>
+        questionId: '@question_*'

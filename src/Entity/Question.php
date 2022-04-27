@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use ApiPlatform\Core\Annotation\ApiSubresource;
 use App\Repository\QuestionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -11,7 +10,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: QuestionRepository::class)]
-#[ApiResource(normalizationContext: ['groups' => ['question']])]
+#[
+    ApiResource(
+        attributes: ["pagination_items_per_page" => 5],
+        normalizationContext: ['groups' => ['question']]
+    )
+]
 class Question extends AbstractEntity
 {
     #[ORM\Column(type: 'text')]

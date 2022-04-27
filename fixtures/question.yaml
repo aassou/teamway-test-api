@@ -1,0 +1,8 @@
+App\Entity\Question:
+    question_{1..5}:
+        content: <sentence(50)>
+        created: <dateTime()>
+        createdBy: <text()>
+        updated: <dateTime()>
+        updatedBy: <text()>
+        isPublished: <boolean(35)>

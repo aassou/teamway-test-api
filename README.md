@@ -2,6 +2,11 @@
 
 This is a Symfony API Platform project (Personality Test).
 
+You can find a live link on Heroku:
+https://teamway-api.herokuapp.com/
+
+OpenAPI link:
+https://teamway-api.herokuapp.com/api
 
 ## Requirements
     - PHP 8.0.5 Or above.
@@ -18,7 +23,7 @@ $ cd teamway-test-api
 ```
 
 ### 2. Install the dependencies
-You can install the dependencies with this command
+Install dependencies using composer
 
 ```bash
 $ composer install
@@ -49,8 +54,18 @@ $ php bin/console make:migration
 # Run migration
 $ php bin/console doctrine:migrations:migrate
 
+### 6. Load some data 
+You can load some data using fixtures or use the sql file attached to the project
+```bash
+# Using Fixtures
+$ php bin/console hautelook:fixtures:load
+
+# Using database_schema
+Please dump the database schema and data in file database_schema.sql
+
+
 ```
-### 6. Start the server
+### 7. Start the server
 
 ```bash
 $ symfony serve
